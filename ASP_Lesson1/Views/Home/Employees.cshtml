@@ -1,0 +1,49 @@
+﻿@*@model IEnumerable<ASP_Lesson1.Entities.Employee>
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+    @foreach(var item in )
+    {
+        <div>
+                <h1>FirstName : @item.Firstname</h1>  
+                    <h1>FirstName : @item.Lastname</h1>  
+                    <div>
+                        <span>USER ID : @item.Id</span>
+                    </div>
+
+            </div>
+        }
+    </body>
+</html>
+
+*@
+
+model IEnumerable<ASP_Lesson1.Models.EmployeeViewModel>
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+         @foreach(var item in Model.Employees)
+      {
+        <div>
+                <h1>FirstName : @item.Firstname</h1>  
+                    <h1>FirstName : @item.Lastname</h1>  
+                    <div>
+                        <span>USER ID : @item.Id</span>
+                    </div>
+
+            </div>
+        }
+          @foreach(var item in Model.Cities)
+      {
+        <h3>@item</h3>
+        }
+    </body>
+</html>
